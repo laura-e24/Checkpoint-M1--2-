@@ -21,8 +21,12 @@
 //  🟢 Si el valor de n recibido por parámetro es menor a 0, debe retornar false.
 
 const calcularIndice = (n) => {
-  // Tu código aquí:
+  
+  if (n < 0) return false;
+  if (n === 0) return 15;
+  if (n === 1) return 25;
 
+  return calcularIndice(n - 1) + calcularIndice(n - 2)
 }
 
 
