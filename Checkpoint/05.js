@@ -57,8 +57,9 @@
 //  🟢 En caso de quedarse sin clientes en la fila, la función debe retornar false.
 
 function cobrarClientes(clientes) {
-  // Tu código aquí:
- 
+  
+  
+  
 }
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️

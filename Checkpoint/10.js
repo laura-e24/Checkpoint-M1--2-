@@ -18,7 +18,9 @@
 //  Si ejecuto ingresosHorario(empleados) me daria de resultado ["Jorge"]
 
 function ingresoEmpleado(horario) {
-
+  return ingresosHorario = (empleados) => {
+    return empleados.filter(e => e.ingresoA < horario).map(a => a.nombre)
+  }
 }
 
 
