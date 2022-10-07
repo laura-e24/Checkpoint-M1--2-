@@ -29,8 +29,18 @@ const { BinarySearchTree } = require("../DS");
 // arbolDePrecios.searchPrice(-10) => "Error"
 
 BinarySearchTree.prototype.searchPrice = function (precio) {
-    // Tu código aquí
+   
+  if (precio <= 0) return "Error";
 
+  if (this.value === precio) return true;
+
+  if (this.value > precio) {
+    if (!this.left) return false;
+    else return this.left.searchPrice(precio)
+  } else {
+    if (!this.right) return false;
+    else return this.right.searchPrice(precio)
+  }
 };
 
 
