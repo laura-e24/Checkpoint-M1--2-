@@ -43,8 +43,15 @@ const { Queue } = require("../DS");
 //  🟢 ATENCIÓN! La QUEUE que retorna la función debe ser una instancia de la clase QUEUE.
 
 function henryParking(arr) {
-  // Tu código aquí:
+  
+  const queue = new Queue()
 
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== 'OUT') queue.enqueue(arr[i])
+    if (queue.size() === 0) return false;
+    if (arr[i] === 'OUT') queue.dequeue()
+  }
+  return queue
 }
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️

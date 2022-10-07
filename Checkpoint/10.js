@@ -18,7 +18,6 @@
 //  Si ejecuto ingresosHorario(empleados) me daria de resultado ["Jorge"]
 
 function ingresoEmpleado(horario) {
-// Tu código aquí:
 
 }
 
