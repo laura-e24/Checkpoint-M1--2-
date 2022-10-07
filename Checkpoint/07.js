@@ -15,8 +15,22 @@
 //    estudiados. NO SE PUEDE USAR EL MÉTODO SORT() DE ARRAY.
 
 function ordenarPrecios(arr) {
-    // Tu código aquí:
 
+  if (arr.some(a => a === 0)) return false;
+  if (arr.length <= 1) return arr;
+
+  let pivote = arr[0]
+  let a = []
+  let b = []
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < pivote) a.push(arr[i])
+    else b.push(arr[i])
+  }
+  a = ordenarPrecios(a)
+  b = ordenarPrecios(b)
+
+  return  a.concat(pivote).concat(b)
 }
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = {
