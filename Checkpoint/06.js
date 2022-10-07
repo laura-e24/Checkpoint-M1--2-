@@ -61,8 +61,24 @@ const { BinarySearchTree } = require("../DS");
 //  🟢 En caso de insertar el producto correctamente, debe retornar el nuevo nodo que ha sido insertado.
 
 BinarySearchTree.prototype.agregarProductos = function (nombreProducto, productos) {
-  // Tu código aquí:
+  
+  let newTree = new BinarySearchTree(nombreProducto)
 
+  if (productos && !productos.hasOwnProperty(nombreProducto)) return "Producto inexistente";
+  else if (productos && productos[nombreProducto] === productos[this.value]) return "Ya existe el producto";
+
+  if (productos && productos[nombreProducto] < productos[this.value]) {
+    if (!this.left) this.left = newTree;
+    else this.left.agregarProductos(nombreProducto)
+
+    
+  } else {
+    if (!this.right) this.right = newTree;
+    else this.right.agregarProductos(nombreProducto)
+  }
+
+
+  return newTree;
 };
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
