@@ -28,8 +28,22 @@
 //  ATENCIÓN! Las respuestas en strings son case sensitive!
 
 function devuelveMayores(lista, valor) {
-  // Tu código aquí:
+  
+  let current = lista.head;
+  let counter = 0;
 
+  var arr = []
+
+  while (current) {
+    if (current.value > valor) counter++;
+    arr.push(current.value)
+    current = current.next;
+  }
+
+  
+  if (arr.every(a => a < valor)) return "Sin precios";
+  else return counter;
+ 
 }
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
