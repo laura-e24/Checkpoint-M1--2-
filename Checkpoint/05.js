@@ -58,8 +58,16 @@
 
 function cobrarClientes(clientes) {
   
-  
-  
+  let i = 0;
+  let array = []
+
+  while (clientes.array[i] && clientes.array[i].dinero >= clientes.array[i].precioProductos) {
+    let removed = clientes.dequeue()
+    array.push(removed.nombre)
+
+    if (clientes.size() === 0) return false;
+  }
+  return array;
 }
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
