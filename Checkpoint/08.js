@@ -20,8 +20,15 @@ const { BinarySearchTree } = require("../DS");
 // Deberá retornar 45.
 
 BinarySearchTree.prototype.searchMax = function () {
-  // Tu código aquí:
+ 
+  let max;
 
+  if (!this.right) {
+    max = this.value
+    return max;
+  }
+
+  return this.right.searchMax()
 };
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = {
