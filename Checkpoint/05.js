@@ -57,11 +57,9 @@
 //  🟢 En caso de quedarse sin clientes en la fila, la función debe retornar false.
 
 function cobrarClientes(clientes) {
-  
-  let i = 0;
   let array = []
 
-  while (clientes.array[i] && clientes.array[i].dinero >= clientes.array[i].precioProductos) {
+  while (clientes.array[0] && clientes.array[0].dinero >= clientes.array[0].precioProductos) {
     let removed = clientes.dequeue()
     array.push(removed.nombre)
 

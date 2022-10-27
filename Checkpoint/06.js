@@ -64,7 +64,7 @@ BinarySearchTree.prototype.agregarProductos = function (nombreProducto, producto
   
   let newTree = new BinarySearchTree(nombreProducto)
 
-  if (productos && !productos.hasOwnProperty(nombreProducto)) return "Producto inexistente";
+  if (productos && !productos[nombreProducto]) return "Producto inexistente";
   else if (productos && productos[nombreProducto] === productos[this.value]) return "Ya existe el producto";
 
   if (productos && productos[nombreProducto] < productos[this.value]) {
